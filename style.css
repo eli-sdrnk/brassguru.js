@@ -1,0 +1,139 @@
+html{
+	background-color: #0a0a0a;
+	
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+h3{
+	color: aliceblue;
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: 0.18em;
+	text-align: center; 
+	display: grid;
+	margin: 40px 0 10px 0;
+}
+h4{
+	color: aliceblue;
+	font-weight: 500;
+	font-size: 16px;
+	letter-spacing: 0.18em;
+	text-align: center; 
+	display: grid;
+	margin: 24px 0 8px 0;
+}
+h5{
+	font-weight: 200;
+	margin: 0;
+	color: aliceblue;
+	text-align: center;
+	letter-spacing: 0.3em;
+	
+}
+
+
+.eg-display{
+	float:left; 
+	display:block;
+	width:40px;
+	border-right: 1px #231f20; red; 
+	height:23px;
+	text-align: center;
+	font-size: 12px;
+	background-color: #231f20; 
+	color: white;
+	font-weight: 300;
+	
+}
+
+select {
+    font-size: 1rem;
+	background-color: black;
+	border: 0px;
+	color: wheat;
+}
+
+
+.dot{
+	
+	height: 22px;
+  width: 22px;
+  background-color: #000;
+  border-radius: 50%;
+	margin-top: 272px;
+	margin-left: 278px;
+	position: fixed;
+}
+
+
+#led
+{
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,112,1) 50%, rgba(128,64,18,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,112,1)), color-stop(100%, rgba(128,64,18,1))); /* safari4+,chrome */
+background:-webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,212,1) 50%, rgba(128,64,18,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,212,1) 50%, rgba(128,64,18,1) 100%); /* opera 11.10+ */
+background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,212,1) 50%, rgba(128,64,18,1) 100%); /* ie10+ */
+background:radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,212,1) 50%, rgba(128,64,18,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#804012',GradientType=0 ); /* ie6-9 */
+	
+	
+	opacity: 1;
+	height: 14px;
+  width: 14px;
+  background-color: #bbb;
+  border-radius: 50%;
+	position:fixed;
+	margin-left: 282px;
+	margin-top: 276px;
+	
+}
+
+.slide{
+	width: 25px;
+	border-right: 1px solid #231f20;;
+	float: left;
+	height:180px;
+	display: block;
+	padding-left: 14px;
+	padding-top: 10px;
+}
+
+p {
+    border-radius: 0.7rem;
+    padding: 1rem 1.5rem;
+}
+
+#keyboard {
+    width: 100%;
+    overflow: hidden;
+}
+
+.key {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 0.5rem;
+    margin: 0 0.5mm;
+    width: 2%;
+	height: 180px;
+    padding: 100px 0 0 0;
+    text-align: center;
+    float: left;
+    text-transform: uppercase;
+    transition: margin 150ms ease-in-out;
+    font-weight: bold;
+	position: relative;
+}
+
+.key span {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: #ccc;
+    border-radius: 0.4rem;
+}
+
+.playing {
+    background: #ddd;
+    margin-top: 4rem;
+}

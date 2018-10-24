@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="bg_img.css">
+<title>brassguru.js</title>
+</head>
+
+<body>
+	<select name="soundType" id="soundType">
+            <option value="square">Square</option>
+            <option value="sawtooth">Sawtooth</option>
+    </select><br>
+    <select name="filterType" class="filtertype">
+        <option value="lowpass">lowpass</option>
+        <option value="highpass">highpass</option>
+        <option value="bandpass">bandpass</option>
+    </select>
+    
+    <!-- filter gain value -->
+    <span class='filter-gain-value'>0</span>
+    <input class="filter-gain-slider" type="range" min="-40" max="40" step="1" value="0" style="visibility: hidden;"/>
+    
+    <div class="front-panel" style="background-image: url(img/bg_brass.gif); width: 1292px; height: 648px; background-size: cover; margin: 160px auto; 
+	box-shadow: 7px 7px 18px -1px rgba(0,0,0,0.75);">
+   	 	<div style="border: 8px solid #231f20; height:632px; width: 634px; float: left; border-right: 4px solid #231f20;"></div>
+   	 	
+    	<div style="border: 8px solid #231f20; height:632px; width: 634px; float: right; border-left: 4px solid #231f20; ">
+    
+		<div style="height: 316px; border-bottom: 2px solid #231f20;">
+			<div style="float:left; width: 315px; border-right:2px solid #231f20;">
+						<div class="slide" style="background-color: #231f20;">
+						<input class='egF-amount input-slider' data-width="8" data-height="160" type='range' min='0' max='8000' step='50' value='0' name='egFAmount'/></div>
+						<div class="slide">
+						<input class='egF-attack input-slider' data-width="8" data-height="160" type='range' min='0' max='1000' step='10' value='0.1' name='egFAttack'/></div>
+						<div class="slide">
+						<input class='egF-decay input-slider' data-width="8" data-height="160" type='range' min='0' max='1000' step='10' value='0.1' name='egFDecay' style="float:left; display: block;"/></div>
+						<div class="slide">
+						<input class='egF-sustain input-slider' data-width="8" data-height="160" type='range' min='0' max='1' step='0.01' value='1' name='egFSustain'  style="float:left; display: block;"/></div>
+						<div class="slide">
+						<input class='egF-release input-slider' data-width="8" data-height="160" type='range' min='0' max='1000' step='10' value='0.1' name='egFRelease'  style="float:left; display: block;"/></div>
+
+						<div class="info" style="display:inline; float:left;">
+						<div class='egFam-display eg-display'>0 ms</div>
+						<div class='egFa-display eg-display'>10ms</div>
+						<div class='egFd-display eg-display'>10ms</div>
+						<div class='egFs-display eg-display'>1</div>
+						<div class='egFr-display eg-display' >10ms</div>
+						</div> 
+					</div>
+			<div style="float:right; width: 316px;width: 315px; border-left:2px solid #231f20;">
+							<div class="slide" >
+						<input class='egA-attack input-slider' data-width="8" data-height="160" type='range' min='0' max='1000' step='25' value='0.1' name='egAAttack'/></div>
+						<div class="slide">
+						<input class='egA-decay input-slider' data-width="8" data-height="160" type='range' min='0' max='1000' step='25' value='0.1' name='egADecay' style="float:left; display: block;"/></div>
+						<div class="slide">
+						<input class='egA-sustain input-slider' data-width="8" data-height="160" type='range' min='0' max='1' step='0.01' value='1' name='egASustain'  style="float:left; display: block;"/></div>
+						<div class="slide">
+						<input class='egA-release input-slider' data-width="8" data-height="160" type='range' min='0' max='1000' step='25' value='0.1' name='egARelease'  style="float:left; display: block;"/></div>
+
+						<div class="info" style="display:inline; float:left;">
+							
+							<div class='egAa-display eg-display'>10ms</div>
+							<div class='egAd-display eg-display'>10ms</div>
+							<div class='egAs-display eg-display'>1</div>
+							<div class='egAr-display eg-display' >10ms</div>
+						</div> 
+					</div>
+		</div>	
+    	<div style="height: 316px; border-bottom: 2px solid #231f20; background-image: url(img/bg_decal_vcfvca.png); background-size: cover; ">
+    	
+    	<div style="float:left; width: 315px; border-right:2px solid #231f20; ">
+    	<div style=" width: 194px; float: left; height: 314px; "> 
+			<div style="height: 160px; width:160px; display:table; padding:17px;">
+			<input class="filter-slider input-knob" data-src="img/mg_big.gif" data-diameter="160" name="filterFreq" type="range" min="10" max='5000' step='2' value='2500' style="vertical-align: middle; "/> <br>
+			</div>
+
+			<div style="height: 120px;  width:200px;">
+			<h3>CUTOFF</h3>
+			<h5 class='freq'>2500Hz</h5>
+			</div>
+			</div>
+    	
+			
+    	
+    
+    <div style="float: right; width: 119px; height: 314px; border-left:2px solid #231f20;">
+    	<div style="height: 90px; padding: 15px;">
+    		<input class="filter-q-slider input-knob" data-src="img/mg_big.gif" data-diameter="90" type="range" min=".0000" max="25" step=".0005" value="1"/>
+    	</div>
+    	<div style="height: 80px;">
+    		<h4>EMPHASIS</h4>
+    		<h5 class='filter-q-value'>0.0</h5>
+    	</div>
+    	<div style="height: 120px; "></div>
+    </div>
+    	</div>
+    	
+    	<div style="float:right; width: 315px; height:314px; border-left:2px solid #231f20;">
+    	
+    	<div style="width:120px;  height:315px; float: left; border-right:1px solid #231f20;"><span class="dot" ></span>
+		<span id="led"></span>
+		</div>
+		
+		<div style="width:193px; height:315px; float: right; border-left:1px solid #231f20;"><h3 style="color: #231f20;">MASTER</h3>
+		
+		
+		
+		<input class="amp-slider input-knob" data-src="img/mg_big.gif" data-diameter="160" name="ampFreq" type="range" min="0" max='1' step='0.02' value='0.5' style="margin: 52px 18px;"/>
+		
+		
+		
+		</div>
+		
+		</div>
+			
+		</div>
+   	
+   	
+    	</div>
+    	
+    </div>	
+
+
+   <div class="slide" style="background-color: #231f20;">
+  	<input class='dly-time input-slider' data-width="8" data-height="200" type='range' min='0' max='051' step='0.5' value='0' name='dlyTime'/></div>  	<div class='dly-display ' style="color: aliceblue;">0 ms</div>
+  
+
+</body>
+<script type="text/javascript" src="script.js">  </script>
+<script type="text/javascript" src="midi.js">  </script>
+<script type="text/javascript" src="pots.js">  </script>
+</html>
+
